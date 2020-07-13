@@ -10,8 +10,25 @@ public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    
+    private String email;
 
-    public Integer getId() {
+    public String getEmail() {
+		return email;
+	}
+
+	public Contact(String email, String name, Integer id) {
+		super();
+		this.email = email;
+		this.name = name;
+		this.id = id;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Integer getId() {
         return id;
     }
 
